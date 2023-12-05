@@ -1,0 +1,130 @@
+@use "src/global";
+
+.navbar {
+	background-color: global.$background-color;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 2rem 4rem;
+
+	@media screen and (max-width: 390px) {
+		justify-content: center;
+		margin: 1rem 2rem;
+	}
+}
+
+.logoContainer {
+	display: block;
+
+	@media screen and (max-width: 390px) {
+		display: none;
+	}
+}
+
+.floatingBox {
+	position: absolute;
+	background-color: global.$white;
+	padding: 1rem 1rem;
+	border-radius: 0.3rem;
+
+	@media screen and (max-width: 390px) {
+		left: 32px;
+	}
+
+	&__icon {
+		width: 28px;
+		height: 28px;
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		align-items: start;
+		width: 400px;
+
+		@media screen and (max-width: 390px) {
+			width: 280px;
+		}
+	}
+
+	&__item {
+		display: flex;
+		padding-top: 1rem;
+	}
+
+	&__subItem {
+		display: flex;
+		flex-direction: column;
+		margin-left: 0.5rem;
+
+		&__title {
+			font-weight: 600;
+			color: global.$deepBlue;
+			font-size: 0.9rem;
+		}
+
+		&__subtitle {
+			color: global.$gray;
+			font-size: 1rem;
+			font-size: 0.6rem;
+		}
+	}
+}
+
+.closeDiv {
+	display: flex;
+	justify-content: space-between;
+
+	@media screen and (min-width: 390px) {
+		display: none;
+	}
+}
+
+.navbar {
+	&__links {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@media screen and (max-width: 390px) {
+			flex-direction: column;
+		}
+	}
+
+	&__item {
+		margin: 0.5rem 1rem;
+		padding: 0.5rem 1rem;
+		color: global.$link-color;
+		border-radius: 0.3rem;
+	}
+
+	&__item:hover {
+		background-color: global.$main-color;
+		cursor: pointer;
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@media screen and (max-width: 390px) {
+			display: none;
+		}
+	}
+
+	&__button {
+		margin: 0.5rem 1rem;
+		color: global.$link-color;
+		cursor: pointer;
+
+		&__signUp {
+			background-color: global.$secondary-color;
+			padding: 0.5rem 1rem;
+			color: global.$white;
+			cursor: pointer;
+			border-radius: 0.3rem;
+		}
+	}
+}

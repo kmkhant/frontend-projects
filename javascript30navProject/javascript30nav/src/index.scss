@@ -1,0 +1,109 @@
+@use "global";
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: global.$font-stack;
+	background-color: global.$background-color;
+}
+
+.main {
+	margin: 6rem 2rem;
+}
+
+.hero {
+	display: flex;
+	justify-content: space-between;
+
+	&__title {
+		font-size: 3rem;
+		font-weight: 600;
+
+		@media screen and (max-width: 390px) {
+			font-size: 2rem;
+		}
+	}
+
+	&__subtitle {
+		font-size: 1.05rem;
+		font-weight: 300;
+		color: global.$gray;
+	}
+
+	&__highlight {
+		color: global.$main-color;
+	}
+
+	&__btn {
+		background-color: global.$secondary-color;
+		padding: 1rem 1.5rem;
+		color: global.$white;
+		font-weight: 500;
+		border-radius: 0.3rem;
+		margin-top: 1rem;
+		width: 140px;
+	}
+
+	&__ratingDiv {
+		margin-top: 2rem;
+		color: global.$gray;
+		display: flex;
+	}
+
+	&__ratingIconsDiv {
+		display: flex;
+		margin-left: 1rem;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__ratingIcons {
+		margin-left: 0.5rem;
+	}
+}
+
+.heroImage {
+	width: 100%;
+}
+
+.heroImage__div {
+	display: flex;
+	justify-content: end;
+
+	@media screen and (max-width: 390px) {
+		display: none;
+	}
+}
+
+.companies__title {
+	text-align: center;
+	font-size: 1rem;
+	margin-top: 3rem;
+	color: global.$gray;
+}
+
+.companies__icons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2rem;
+	flex-wrap: wrap;
+}
+
+.companies__icon {
+	margin-left: 2rem;
+
+	@media screen and (max-width: 390px) {
+		margin-left: 0;
+	}
+}
+
+.companies__image {
+	@media screen and (max-width: 390px) {
+		width: 50%;
+		height: 50%;
+	}
+}
